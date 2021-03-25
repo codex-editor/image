@@ -342,6 +342,10 @@ export default class ImageTool {
    * @returns {void}
    */
   onUpload(response) {
+    if (!response) {
+      return;
+    }
+
     if (response.success && response.file) {
       this.image = response.file;
     } else {
